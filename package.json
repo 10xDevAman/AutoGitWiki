@@ -11,6 +11,13 @@
   "type": "module",
   "dependencies": {
     "dotenv": "^18.0.5",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "inngest": "^4.21.1"
+  },
+  "devDependencies": {
+    "inngest-cli": "^1.45.1"
+  },
+  "allowScripts": {
+    "inngest-cli@1.45.1": true
   }
 }
