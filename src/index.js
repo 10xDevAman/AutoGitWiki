@@ -3,20 +3,17 @@ import "dotenv/config";
 import { inngest, functions } from "./inngest/index.js";
 import { serve } from "inngest/express";
 
-
-
-const app= express();
+const app = express();
 
 app.use(express.json());
 app.use("/api/inngest", serve({ client: inngest, functions }));
 
-app.get("/", (req, res)=>{
-    res.send("Server is Running.");
-})
+app.get("/", (req, res) => {
+  res.send("Server is Running.");
+});
 
-const port= process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
-app.listen(port, ()=>{
-    console.log(`http://localhost:${port}`);
-})
-
+app.listen(port, () => {
+  console.log(`http://localhost:${port}`);
+});
