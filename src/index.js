@@ -3,6 +3,7 @@ import "dotenv/config";
 import { inngest, functions } from "./inngest/index.js";
 import { serve } from "inngest/express";
 import indexRoutes from "./routes/index.routes.js";
+import chatRoutes from "./routes/chat.routes.js"
 
 
 const app = express();
@@ -15,6 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/index", indexRoutes);
+app.use("/api/chat", chatRoutes);
 
 const port = process.env.PORT || 3000;
 
